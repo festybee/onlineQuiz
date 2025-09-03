@@ -1,11 +1,16 @@
-// import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Welcome from './components/Welcome';
+import Quiz from './components/Quiz';
 
 function App() {
 
   return (
-    <>
-        <h1>Online Quiz</h1>
-    </>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Welcome />} />
+          <Route path="/quiz" element={<Quiz />} />
+        </Routes>
+      </BrowserRouter>
   )
 }
 

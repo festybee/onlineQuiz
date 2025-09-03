@@ -1,0 +1,14 @@
+body {
+    font-family: 'Inter', 'Roboto', 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 1rem;       /* 16px default for accessibility */
+    line-height: 1.5;      /* Improves readability */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+#root {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    min-height: 100vh;
+}

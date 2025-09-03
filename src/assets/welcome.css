@@ -1,0 +1,91 @@
+.welcome {
+    width: 90%;               /* Responsive width */
+    max-width: 80%;         /* Prevent it from being too wide */
+    padding: 20px;
+    background: #CFD9F2;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.instruction {
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.how-to {
+    list-style: none; /* hide default numbers */
+    counter-reset: my-counter; /* initialize counter */
+    padding-left: 0;
+}
+
+.wrap {
+    display: flex;              /* Enables flex layout */
+    gap: 20px;                  /* Space between the boxes */
+    flex-wrap: wrap;            /* Wraps boxes on small screens */
+    justify-content: center;    /* Optional: center horizontally */
+}
+
+.navigation {
+    display: flex;
+    border: 5px solid #CFD9F2;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+}
+
+.cover {
+    flex: 1;
+    border: 5px solid #CFD9F2;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+}
+
+.cover p {
+    text-align: left;
+
+}
+
+.how-to li {
+    counter-increment: my-counter; /* increment counter */
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 40px; /* space for circle */
+    text-align: left;
+}
+
+/* Create the circle with number inside */
+.how-to li::before {
+    content: counter(my-counter); /* the number */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; /* makes it a circle */
+    background-color: #3498db; /* blue background */
+    color: white; /* number color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    margin: 20px;
+}
+
+.btn:hover {
+    background-color: #1d6fa5;
+}
