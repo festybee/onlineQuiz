@@ -28,6 +28,7 @@ export default function Welcome() {
                 <ol className={"how-to"}>
                     <li>Question links show progress</li>
                     <li>Answered questions highlighted</li>
+                    <li>Number of Questions: 20</li>
                 </ol>
             </div>
             </div>

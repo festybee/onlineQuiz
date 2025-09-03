@@ -1,0 +1,84 @@
+.quiz {
+    width: 90%;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #EFF2FB;
+}
+
+.question-navigation {
+    background: #CFD9F2;
+    text-align: left;
+    border: 2px solid #3498db;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.question-block {
+    background: #CFD9F2;
+    border: 2px solid #3498db;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.question-list {
+    list-style: none; /* hide default numbers */
+    counter-reset: my-counter; /* initialize counter */
+    padding-left: 0;
+}
+
+.question-list li {
+    list-style: none;            /* remove default bullet */
+    padding: 10px 15px;
+    margin: 8px 0;
+    border: 2px solid #DFE6FE;   /* blue border */
+    border-radius: 8px;
+    cursor: pointer;             /* hand cursor on hover */
+    transition: background 0.2s ease;
+}
+
+.question-list li:hover {
+    background: #3498db;
+}
+
+#prev {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#prev:hover {
+    background-color: #6c757d;
+    font-weight: bold;
+}
+
+#next {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#next:hover {
+    background-color: #6c757d;
+    font-weight: bold;
+}
+
+.quiz-controls {
+    display: flex;
+    justify-content: space-between; /* pushes one left, one right */
+    align-items: center;            /* keeps them vertically aligned */
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.quiz-controls button {
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
