@@ -4,6 +4,7 @@ import "../assets/result.css";
 
 function Result({ questions, selectedOptions }) {
 
+    // Loop through the questions array and accumulate the total correct answers.
     const score = questions.reduce((total, question, index) => {
 
         return selectedOptions[index] === question.answer ? total + 1 : total;

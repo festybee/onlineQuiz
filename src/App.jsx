@@ -8,9 +8,8 @@ function App() {
   return (
       <BrowserRouter>
         <Routes>
-            <Route path="/" element={<Welcome />} />
-            <Route path="/quiz" element={<Quiz />} />
-            {/*<Route path="/result" element={<Result />} />*/}
+            <Route path="/" element={<Welcome />} />  // Landing Page
+            <Route path="/quiz" element={<Quiz />} /> // Route to access the quiz component from Welcome component
         </Routes>
       </BrowserRouter>
   )

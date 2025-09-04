@@ -840,16 +840,6 @@
         "answer": "The Jules Rimet Trophy"
     },
     {
-        "question": "Which tennis player has won the most Grand Slam titles?",
-        "options": [
-            "Roger Federer",
-            "Novak Djokovic",
-            "Rafael Nadal",
-            "Serena Williams"
-        ],
-        "answer": "Novak Djokovic"
-    },
-    {
         "question": "How many players are on a rugby union team?",
         "options": [
             "13",

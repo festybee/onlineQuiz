@@ -1,21 +1,23 @@
 import { useEffect, useState } from "react";
-import allQuestions from "../data/questions.json";
+import allQuestions from "../data/questions.json";  // Import all the questions from the qustion bank
 import getRandomQuestions from "../utils/quizUtils";
 import "../assets/quiz.css";
 import Result from "./Result";
 
 function Quiz() {
-    const [questions, setQuestions] = useState([]);
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [selectedOptions, setSelectedOptions] = useState(Array(questions.length).fill(null));
-    const [isQuizFinished, setIsQuizFinished] = useState(false);
+    const [questions, setQuestions] = useState([]);  // useState for the questions
+    const [currentIndex, setCurrentIndex] = useState(0); // useState for the question index
+    const [selectedOptions, setSelectedOptions] = useState(Array(questions.length).fill(null)); // useState for the selected answers. \
+    // Initial value is an array of null values totalling the number of questions generated.
+    const [isQuizFinished, setIsQuizFinished] = useState(false); // useState to track when the quiz is at the last question.
 
+    // useEffect hook to load the random questions into the session
     useEffect(() => {
         // Select 20 random questions.
         setQuestions(getRandomQuestions(allQuestions, 10));
     }, []);
 
-    // Go to next question.
+    // Go to next question. Check if on last question and display Finish instead of Next
     const handleNext = () => {
         if (currentIndex === questions.length - 1) {
             setIsQuizFinished(true);
@@ -31,18 +33,21 @@ function Quiz() {
         }
     }
 
+    // function to update selected options into an array.
     const handleSelected = (opt) => {
         const updated = [...selectedOptions];
         updated[currentIndex] = opt;
         setSelectedOptions(updated);
     }
 
+    // If no questions loaded yet, display Loading questions.
     if (questions.length === 0) {
         return <p>Loading questions...</p>;
     }
 
-    const currentQuestion = questions[currentIndex];
+    const currentQuestion = questions[currentIndex]; // Gets the current question.
 
+    // Return Result if Finish Button is clicked else return the Quiz questions.
     if (isQuizFinished) {
         return <Result selectedOptions={selectedOptions} questions={questions} />;
     }
@@ -61,7 +66,7 @@ function Quiz() {
 
                 <div className="question-block">
                     <h3>
-                        {currentIndex + 1}. {currentQuestion.question}
+                        {currentIndex + 1}.  {currentQuestion.question}
                     </h3>
                     <ul>
                         {currentQuestion.options.map((opt, idx) => (
