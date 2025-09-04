@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import '../assets/welcome.css'
 
-export default function Welcome() {
+function Welcome() {
     return (
 
         <div className={"welcome"}>
@@ -39,3 +39,5 @@ export default function Welcome() {
         </div>
     )
 };
+
+export default Welcome;

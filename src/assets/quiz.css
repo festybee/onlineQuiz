@@ -23,12 +23,6 @@
 }
 
 .question-list {
-    list-style: none; /* hide default numbers */
-    counter-reset: my-counter; /* initialize counter */
-    padding-left: 0;
-}
-
-.question-list li {
     list-style: none;            /* remove default bullet */
     padding: 10px 15px;
     margin: 8px 0;
@@ -38,7 +32,11 @@
     transition: background 0.2s ease;
 }
 
-.question-list li:hover {
+.question-list:hover {
+    /*background: #EFF2FB;*/
+}
+
+.selected {
     background: #3498db;
 }
 
