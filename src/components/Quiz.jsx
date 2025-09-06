@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import allQuestions from "../data/questions.json";  // Import all the questions from the qustion bank
+import allQuestions from "../data/questions.json";  // Import all the questions from the question bank
 import getRandomQuestions from "../utils/quizUtils";
 import "../assets/quiz.css";
 import Result from "./Result";
@@ -14,7 +14,7 @@ function Quiz() {
     // useEffect hook to load the random questions into the session
     useEffect(() => {
         // Select 20 random questions.
-        setQuestions(getRandomQuestions(allQuestions, 10));
+        setQuestions(getRandomQuestions(allQuestions, 20));
     }, []);
 
     // Go to next question. Check if on last question and display Finish instead of Next
