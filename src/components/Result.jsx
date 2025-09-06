@@ -18,7 +18,7 @@ function Result({ questions, selectedOptions }) {
                 <p className="text">Correct Answers</p>
             </div>
             {/*<p>Your Score: {score} / {questions.length}</p>*/}
-            <div className="score">{score / questions.length * 100}%
+            <div className="score">{Math.floor(score / questions.length * 100)}%
                 <p className="text">Percentage</p>
             </div>
 
