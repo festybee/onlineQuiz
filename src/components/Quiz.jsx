@@ -68,7 +68,7 @@ function Quiz() {
                     <h3>
                         {currentIndex + 1}.  {currentQuestion.question}
                     </h3>
-                    <ul>
+                    <ul className="options-cover">
                         {currentQuestion.options.map((opt, idx) => (
                             <li className={`question-list ${selectedOptions[currentIndex] === opt ? "selected" : ""}`} key={idx}
                                 onClick={() => handleSelected(opt)}>{opt}</li>
@@ -77,11 +77,12 @@ function Quiz() {
                 </div>
 
                 <div className={"quiz-controls"}>
-                    {currentIndex > 0 && (<button onClick={handlePrevious} id="prev">
+                    {currentIndex > 0 && (
+                        <button onClick={handlePrevious} className="quiz-controls">
                         Previous
                     </button>)}
 
-                    <button onClick={handleNext} id="next">
+                    <button onClick={handleNext} className="quiz-controls" disabled={!selectedOptions[currentIndex]}>
                         {currentIndex === questions.length - 1 ? "Finish Quiz" : "Next"}
                     </button>
                 </div>
