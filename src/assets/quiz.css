@@ -94,3 +94,30 @@
     cursor: not-allowed;
     opacity: 0.6;
 }
+
+.navigator {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.nav-btn {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    border-radius: 10%;
+    border: 1px solid #CFD9F2;
+    background: #CFD9F2;
+    color: #CFD9F2
+}
+
+.nav-btn.answered {
+    background: #4cafef; /* blue for answered */
+    color: white;
+    cursor: pointer;
+}
+
+.nav-btn.active {
+    border: 2px solid #CFD9F2; /* highlight current question */
+}

@@ -59,6 +59,20 @@ function Quiz() {
                     <h5>Question Navigation</h5>
                     <p>Current: {currentIndex + 1} of {questions.length}</p>
 
+                    {/*This adds a link to answered questions.*/}
+                    <div className="navigator">
+                        {questions.map((q, idx) => (
+                            <button
+                                key={idx}
+                                className={`nav-btn ${selectedOptions[idx] ? "answered" : ""} ${idx === currentIndex ? "active" : ""}`}
+                                onClick={() => setCurrentIndex(idx)}
+                                disabled={!selectedOptions[idx]}>
+                                {idx + 1}
+                            </button>
+                        ))}
+                    </div>
+
+
                 </div>
                 <p>
                     {/*Question {currentIndex + 1} of {questions.length}*/}
