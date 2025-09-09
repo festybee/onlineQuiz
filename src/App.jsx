@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Welcome from './components/Welcome';
 import Quiz from './components/Quiz';
-import Result from './components/Result';
+import Review from './components/Review';
+
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Welcome />} />  // Landing Page
             <Route path="/quiz" element={<Quiz />} /> // Route to access the quiz component from Welcome component
+            <Route path="/review" element={<Review />} />
         </Routes>
       </BrowserRouter>
   )

@@ -1,5 +1,7 @@
 import React from "react";
 import "../assets/result.css";
+import Review from "./Review.jsx";
+import {Link} from "react-router-dom";
 
 
 function Result({ questions, selectedOptions }) {
@@ -25,6 +27,10 @@ function Result({ questions, selectedOptions }) {
             <div className="score">{score}/{questions.length}
                 <p className="text">Final Score</p>
             </div>
+            {/*<a href={'review'}>Review Assessment</a>*/}
+            <Link to="/review" className={"btn"}>
+                Review Assessment
+            </Link>
         </div>
     )
 }

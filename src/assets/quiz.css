@@ -104,6 +104,8 @@
 
 .nav-btn {
     display: flex;
+    justify-content: center;     /*Helps to center the items in the box*/
+    align-items: center;        /*Helps to center the items in the box*/
     width: 32px;
     height: 32px;
     border-radius: 10%;

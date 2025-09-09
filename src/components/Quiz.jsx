@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import allQuestions from "../data/questions.json";  // Import all the questions from the question bank
 import getRandomQuestions from "../utils/quizUtils";
 import "../assets/quiz.css";
@@ -7,14 +7,15 @@ import Result from "./Result";
 function Quiz() {
     const [questions, setQuestions] = useState([]);  // useState for the questions
     const [currentIndex, setCurrentIndex] = useState(0); // useState for the question index
-    const [selectedOptions, setSelectedOptions] = useState(Array(questions.length).fill(null)); // useState for the selected answers. \
-    // Initial value is an array of null values totalling the number of questions generated.
+    // useState(Array(questions.length).fill(null)) useState for the selected answers.
+    // Initial value is an array of null values totaling the number of questions generated.
+    const [selectedOptions, setSelectedOptions] = useState([...Array(questions.length)]);
     const [isQuizFinished, setIsQuizFinished] = useState(false); // useState to track when the quiz is at the last question.
 
     // useEffect hook to load the random questions into the session
     useEffect(() => {
         // Select 20 random questions.
-        setQuestions(getRandomQuestions(allQuestions, 20));
+        setQuestions(getRandomQuestions(allQuestions, 5));
     }, []);
 
     // Go to next question. Check if on last question and display Finish instead of Next
@@ -71,7 +72,6 @@ function Quiz() {
                             </button>
                         ))}
                     </div>
-
 
                 </div>
                 <p>
