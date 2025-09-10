@@ -9,10 +9,16 @@ function Result() {
     const { questions, selectedOptions, currentIndex } = location.state || {}
 
     // Loop through the questions array and accumulate the total correct answers.
-    const score = questions.reduce((total, question, index) => {
-
-        return selectedOptions[index] === question.answer ? total + 1 : total;
-    }, 0);
+    // const score = questions.reduce((total, question, index) => {
+    //
+    //     return selectedOptions[index] === question.answer ? total + 1 : total;
+    // }, 0);
+    let score = 0;
+    questions.forEach((question, index) => {
+        if (selectedOptions[index] === question.answer) {
+            score++
+        }
+    })
 
     return (
         <div className="result">
