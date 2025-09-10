@@ -18,7 +18,7 @@ function Quiz() {
     // useEffect hook to load the random questions into the session
     useEffect(() => {
         // Select 20 random questions.
-        setQuestions(getRandomQuestions(allQuestions, 5));
+        setQuestions(getRandomQuestions(allQuestions, 20));
     }, []);
 
     // Go to next question. Check if on last question and display Finish instead of Next
@@ -45,7 +45,7 @@ function Quiz() {
     }
 
     const handleFinish = () => {
-        navigate("/result", { state: { questions: questions, selectedOptions: selectedOptions } });
+        navigate("/result", { state: { questions: questions, selectedOptions: selectedOptions, currentIndex: currentIndex } });
     }
 
 

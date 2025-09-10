@@ -6,7 +6,7 @@ import { useLocation, Link } from "react-router-dom";
 
 function Result() {
     const location = useLocation();
-    const { questions, selectedOptions } = location.state || {}
+    const { questions, selectedOptions, currentIndex } = location.state || {}
 
     // Loop through the questions array and accumulate the total correct answers.
     const score = questions.reduce((total, question, index) => {
@@ -32,9 +32,14 @@ function Result() {
             {/*<a href={'review'}>Review Assessment</a>*/}
             <Link
                 to="/review"
-                state={{ selectedOptions, questions }}
+                state={{ selectedOptions, questions, currentIndex }}
                 className={"btn"}>
                 Review Assessment
+            </Link>
+            <Link
+                to="/welcome"
+                className={"btn_reset"}>
+                Reset
             </Link>
         </div>
     )

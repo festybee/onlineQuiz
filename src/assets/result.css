@@ -1,5 +1,5 @@
 .result {
-    flex: 1;
+    flex: 0 0 70%;
     background-color: #FFFFFF;
     border-radius: 15px;
     padding: 20px;
@@ -17,4 +17,36 @@
 .text {
     color: #000000;
     font-size: 12px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    margin: 20px;
+}
+
+.btn:hover {
+    background-color: #1d6fa5;
+}
+
+.btn_reset {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    margin: 20px;
+}
+
+.btn_reset:hover {
+    background-color: #CE7272;
 }

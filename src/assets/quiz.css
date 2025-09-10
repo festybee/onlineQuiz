@@ -1,5 +1,5 @@
 .quiz {
-    width: 90%;
+    flex: 0 0 70%;
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
