@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import allQuestions from "../data/questions.json";  // Import all the questions from the question bank
 import getRandomQuestions from "../utils/quizUtils";
 import "../assets/quiz.css";
 import Result from "./Result";
+import Review from "./Review.jsx";
 
 function Quiz() {
     const [questions, setQuestions] = useState([]);  // useState for the questions
@@ -11,6 +13,7 @@ function Quiz() {
     // Initial value is an array of null values totaling the number of questions generated.
     const [selectedOptions, setSelectedOptions] = useState([...Array(questions.length)]);
     const [isQuizFinished, setIsQuizFinished] = useState(false); // useState to track when the quiz is at the last question.
+    const navigate = useNavigate();
 
     // useEffect hook to load the random questions into the session
     useEffect(() => {
@@ -41,6 +44,11 @@ function Quiz() {
         setSelectedOptions(updated);
     }
 
+    const handleFinish = () => {
+        navigate("/result", { state: { questions: questions, selectedOptions: selectedOptions } });
+    }
+
+
     // If no questions loaded yet, display Loading questions.
     if (questions.length === 0) {
         return <p>Loading questions...</p>;
@@ -49,9 +57,14 @@ function Quiz() {
     const currentQuestion = questions[currentIndex]; // Gets the current question.
 
     // Return Result if Finish Button is clicked else return the Quiz questions.
-    if (isQuizFinished) {
-        return <Result selectedOptions={selectedOptions} questions={questions} />;
-    }
+    // if (isQuizFinished) {
+    //     return (
+    //         <>
+    //         <Result selectedOptions={selectedOptions} questions={questions} />
+    //         <Review questions={questions} />
+    //         </>
+    //     )
+    // }
 
         return (
             <div className="quiz">
@@ -97,7 +110,7 @@ function Quiz() {
                     </button>)}
 
                     <button onClick={handleNext} className="quiz-controls" disabled={!selectedOptions[currentIndex]}>
-                        {currentIndex === questions.length - 1 ? "Finish Quiz" : "Next"}
+                        {currentIndex === questions.length - 1 ? <span onClick={handleFinish}> Finish Quiz </span> : "Next"}
                     </button>
                 </div>
             </div>

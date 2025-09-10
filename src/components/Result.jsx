@@ -1,10 +1,12 @@
 import React from "react";
 import "../assets/result.css";
 import Review from "./Review.jsx";
-import {Link} from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 
-function Result({ questions, selectedOptions }) {
+function Result() {
+    const location = useLocation();
+    const { questions, selectedOptions } = location.state || {}
 
     // Loop through the questions array and accumulate the total correct answers.
     const score = questions.reduce((total, question, index) => {
@@ -28,7 +30,10 @@ function Result({ questions, selectedOptions }) {
                 <p className="text">Final Score</p>
             </div>
             {/*<a href={'review'}>Review Assessment</a>*/}
-            <Link to="/review" className={"btn"}>
+            <Link
+                to="/review"
+                state={{ selectedOptions, questions }}
+                className={"btn"}>
                 Review Assessment
             </Link>
         </div>
