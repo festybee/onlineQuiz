@@ -44,6 +44,7 @@
 
 .nav-btn.active {
     border: 2px solid #CFD9F2; /* highlight current question */
+    color: black;
 }
 
 .question-list {
@@ -60,10 +61,17 @@
     color: white;
 }
 
+.correct {
+    background-color: #00A300 !important;
+}
+
+.wrong {
+    background-color: #FF0000 !important;
+}
 /* Correct = green ✔ */
 .correct::after {
     content: "✔";
-    color: green;
+    color: #001400 !important;
     font-weight: bold;
     position: absolute;
     right: 10px;
@@ -72,7 +80,7 @@
 /* Wrong = red ✖ */
 .wrong::after {
     content: "✖";
-    color: red;
+    color: #140000 !important;
     font-weight: bold;
     position: absolute;
     right: 10px;

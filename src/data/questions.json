@@ -830,16 +830,6 @@
         "answer": "Usain Bolt"
     },
     {
-        "question": "What is the name of the trophy awarded to the winner of the FIFA World Cup?",
-        "options": [
-            "The Jules Rimet Trophy",
-            "The World Cup Trophy",
-            "The Golden Ball",
-            "The Golden Boot"
-        ],
-        "answer": "The Jules Rimet Trophy"
-    },
-    {
         "question": "How many players are on a rugby union team?",
         "options": [
             "13",
@@ -848,16 +838,6 @@
             "12"
         ],
         "answer": "15"
-    },
-    {
-        "question": "What\u2019s the length of a marathon race?",
-        "options": [
-            "26 miles",
-            "26.2 miles",
-            "25 miles",
-            "27 miles"
-        ],
-        "answer": "26.2 miles"
     },
     {
         "question": "What sport uses a bat and a round ball?",

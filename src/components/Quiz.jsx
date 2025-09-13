@@ -1,31 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import allQuestions from "../data/questions.json";  // Import all the questions from the question bank
 import getRandomQuestions from "../utils/quizUtils";
 import "../assets/quiz.css";
-import Result from "./Result";
-import Review from "./Review.jsx";
+
 
 function Quiz() {
+
     const [questions, setQuestions] = useState([]);  // useState for the questions
     const [currentIndex, setCurrentIndex] = useState(0); // useState for the question index
-    // useState(Array(questions.length).fill(null)) useState for the selected answers.
+
     // Initial value is an array of null values totaling the number of questions generated.
     const [selectedOptions, setSelectedOptions] = useState([...Array(questions.length)]);
-    const [isQuizFinished, setIsQuizFinished] = useState(false); // useState to track when the quiz is at the last question.
     const navigate = useNavigate();
 
-    // useEffect hook to load the random questions into the session
+
+    // useEffect hook to load the number of random questions into the session
     useEffect(() => {
-        // Select 20 random questions.
+
         setQuestions(getRandomQuestions(allQuestions, 20));
     }, []);
 
-    // Go to next question. Check if on last question and display Finish instead of Next
+    // Go to next question.
     const handleNext = () => {
-        if (currentIndex === questions.length - 1) {
-            setIsQuizFinished(true);
-        } else {
+        if (currentIndex < questions.length - 1) {
             setCurrentIndex(currentIndex + 1);
         }
     }
@@ -56,16 +54,6 @@ function Quiz() {
 
     const currentQuestion = questions[currentIndex]; // Gets the current question.
 
-    // Return Result if Finish Button is clicked else return the Quiz questions.
-    // if (isQuizFinished) {
-    //     return (
-    //         <>
-    //         <Result selectedOptions={selectedOptions} questions={questions} />
-    //         <Review questions={questions} />
-    //         </>
-    //     )
-    // }
-
         return (
             <div className="quiz">
                 <h2>Quiz App</h2>
@@ -87,9 +75,6 @@ function Quiz() {
                     </div>
 
                 </div>
-                <p>
-                    {/*Question {currentIndex + 1} of {questions.length}*/}
-                </p>
 
                 <div className="question-block">
                     <h3>

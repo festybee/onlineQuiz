@@ -58,18 +58,6 @@
     font-weight: bold;
 }
 
-/*#next {*/
-/*    background-color: #3498db;*/
-/*    color: white;*/
-/*    cursor: pointer;*/
-/*    font-weight: bold;*/
-/*}*/
-
-/*#next:hover {*/
-/*    background-color: #6c757d;*/
-/*    font-weight: bold;*/
-/*}*/
-
 .quiz-controls {
     display: flex;
     justify-content: space-between; /* pushes one left, one right */
@@ -122,4 +110,14 @@
 
 .nav-btn.active {
     border: 2px solid #CFD9F2; /* highlight current question */
+}
+
+@media (max-width: 600px) {
+    .quiz {
+        flex: 100%;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 0;
+        background-color: #EFF2FB;
+    }
 }

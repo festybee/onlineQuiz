@@ -89,3 +89,14 @@
 .btn:hover {
     background-color: #1d6fa5;
 }
+
+@media (max-width: 600px) {
+    .welcome {
+        width: 90%;               /* Responsive width */
+        max-width: 100%;         /* Prevent it from being too wide */
+        padding: 20px;
+        background: #CFD9F2;
+        text-align: center;
+        border-radius: 0;
+    }
+}

@@ -12,8 +12,9 @@ function App() {
         <Routes>
             <Route path="/" element={<Navigate to="/welcome" replace />} />
 
-            <Route path="/welcome" element={<Welcome />} />  // Landing Page
-            <Route path="/quiz" element={<Quiz />} /> // Route to access the quiz component from Welcome component
+            {/*All routes for the application go below.*/}
+            <Route path="/welcome" element={<Welcome />} />
+            <Route path="/quiz" element={<Quiz />} />
             <Route path="/result" element={<Result />} />
             <Route path="/review" element={<Review />} />
         </Routes>

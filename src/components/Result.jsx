@@ -8,11 +8,7 @@ function Result() {
     const location = useLocation();
     const { questions, selectedOptions, currentIndex } = location.state || {}
 
-    // Loop through the questions array and accumulate the total correct answers.
-    // const score = questions.reduce((total, question, index) => {
-    //
-    //     return selectedOptions[index] === question.answer ? total + 1 : total;
-    // }, 0);
+
     let score = 0;
     questions.forEach((question, index) => {
         if (selectedOptions[index] === question.answer) {
@@ -27,7 +23,7 @@ function Result() {
             <div className="score">{score}
                 <p className="text">Correct Answers</p>
             </div>
-            {/*<p>Your Score: {score} / {questions.length}</p>*/}
+
             <div className="score">{Math.floor(score / questions.length * 100)}%
                 <p className="text">Percentage</p>
             </div>
@@ -35,7 +31,7 @@ function Result() {
             <div className="score">{score}/{questions.length}
                 <p className="text">Final Score</p>
             </div>
-            {/*<a href={'review'}>Review Assessment</a>*/}
+
             <Link
                 to="/review"
                 state={{ selectedOptions, questions, currentIndex }}
