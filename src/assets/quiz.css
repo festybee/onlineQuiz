@@ -1,5 +1,5 @@
 .quiz {
-    width: 90%;
+    flex: 0 0 70%;
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
@@ -58,18 +58,6 @@
     font-weight: bold;
 }
 
-/*#next {*/
-/*    background-color: #3498db;*/
-/*    color: white;*/
-/*    cursor: pointer;*/
-/*    font-weight: bold;*/
-/*}*/
-
-/*#next:hover {*/
-/*    background-color: #6c757d;*/
-/*    font-weight: bold;*/
-/*}*/
-
 .quiz-controls {
     display: flex;
     justify-content: space-between; /* pushes one left, one right */
@@ -93,4 +81,43 @@
     background-color: #ccc;
     cursor: not-allowed;
     opacity: 0.6;
+}
+
+.navigator {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.nav-btn {
+    display: flex;
+    justify-content: center;     /*Helps to center the items in the box*/
+    align-items: center;        /*Helps to center the items in the box*/
+    width: 32px;
+    height: 32px;
+    border-radius: 10%;
+    border: 1px solid #CFD9F2;
+    background: #CFD9F2;
+    color: #CFD9F2
+}
+
+.nav-btn.answered {
+    background: #4cafef; /* blue for answered */
+    color: white;
+    cursor: pointer;
+}
+
+.nav-btn.active {
+    border: 2px solid #CFD9F2; /* highlight current question */
+}
+
+@media (max-width: 600px) {
+    .quiz {
+        flex: 100%;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 0;
+        background-color: #EFF2FB;
+    }
 }

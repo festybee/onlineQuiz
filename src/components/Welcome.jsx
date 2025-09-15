@@ -26,9 +26,9 @@ function Welcome() {
             <div className={"cover"}>
                 <p>Navigation and Features</p>
                 <ol className={"how-to"}>
-                    <li>Question links show progress</li>
+                    <li>Question navigation show progress</li>
                     <li>Answered questions highlighted</li>
-                    <li>Number of Questions: 20</li>
+                    <li>Number of Questions: 10</li>
                 </ol>
             </div>
             </div>

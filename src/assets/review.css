@@ -1,0 +1,106 @@
+.review-container {
+    flex: 0 0 70%;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.answer {
+    background-color: #CFD9F2;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.navigator {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #CFD9F2;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.result_page {
+    width: 100px;
+    height: 32px;
+    align-content: center;
+    background: #096DB0;
+    color: #FFFFFF;
+    padding: 0 10px;
+    border: 1px solid #3498db;
+}
+
+.question-block {
+    background: #CFD9F2;
+    border: 2px solid #3498db;
+    padding: 10px;
+}
+
+.nav-btn.answered {
+    background: #4CAFEF; /* blue for answered */
+    color: white;
+}
+
+.nav-btn.active {
+    border: 2px solid #CFD9F2; /* highlight current question */
+    color: black;
+}
+
+.question-list {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative; /* needed for ✔ or ✖ positioning */
+}
+
+.selected {
+    background-color: #4cafef;
+    color: white;
+}
+
+.correct {
+    background-color: #00A300 !important;
+}
+
+.wrong {
+    background-color: #FF0000 !important;
+}
+/* Correct = green ✔ */
+.correct::after {
+    content: "✔";
+    color: #001400 !important;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+}
+
+/* Wrong = red ✖ */
+.wrong::after {
+    content: "✖";
+    color: #140000 !important;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+}
+
+.navigator {
+    /*display: flex;*/
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.nav-btn {
+    display: flex;
+    justify-content: center;     /*Helps to center the items in the box*/
+    align-items: center;        /*Helps to center the items in the box*/
+    width: 32px;
+    height: 32px;
+    border-radius: 10%;
+    border: 1px solid #CFD9F2;
+    background: #CFD9F2;
+    color: #CFD9F2
+}

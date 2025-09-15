@@ -5,5 +5,13 @@ This is an online quiz platform where users can answer a series of questions and
 The quiz will feature random selection of questions and would feature multiple-choice 
 options and / or true / false questions.
 
-### Optional
+![img.png](img.png)
+
+### Features
+- Quiz Instructions
 - Feedback on failed questions to be given.
+- Question navigation buttons
+- Question review before submission
+
+### License
+OnlineQUIZ is open-source under the [MIT License](./LICENSE).
