@@ -18,7 +18,7 @@ function Quiz() {
     // useEffect hook to load the number of random questions into the session
     useEffect(() => {
 
-        setQuestions(getRandomQuestions(allQuestions, 20));
+        setQuestions(getRandomQuestions(allQuestions, 10));
     }, []);
 
     // Go to next question.
