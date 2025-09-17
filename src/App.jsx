@@ -10,10 +10,10 @@ function App() {
   return (
       <HashRouter>
         <Routes>
-            <Route path="/" element={<Navigate to="/welcome" replace />} />
+            <Route path="/welcome" element={<Navigate to="/" replace />} />
 
             {/*All routes for the application go below.*/}
-            <Route path="/welcome" element={<Welcome />} />
+            <Route path="/" element={<Welcome />} />
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/result" element={<Result />} />
             <Route path="/review" element={<Review />} />
