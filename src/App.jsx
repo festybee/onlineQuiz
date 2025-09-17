@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Welcome from './components/Welcome';
 import Quiz from './components/Quiz';
 import Review from './components/Review';
@@ -8,7 +8,7 @@ import Result from './components/Result';
 function App() {
 
   return (
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
             <Route path="/" element={<Navigate to="/welcome" replace />} />
 
@@ -18,7 +18,7 @@ function App() {
             <Route path="/result" element={<Result />} />
             <Route path="/review" element={<Review />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
   )
 }
 
