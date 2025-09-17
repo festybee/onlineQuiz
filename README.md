@@ -5,7 +5,7 @@ This is an online quiz platform where users can answer a series of questions and
 The quiz will feature random selection of questions and would feature multiple-choice 
 options and / or true / false questions.
 
-![img.png](img.png)
+![img.png](public/img.png)
 
 ### Features
 - Quiz Instructions
